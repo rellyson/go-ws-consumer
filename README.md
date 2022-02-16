@@ -8,6 +8,10 @@
 
 This project aims to consume a Web Service through a HTTP proxy. A list of available Webservices can be found [here](https://documenter.getpostman.com/view/8854915/Szf26WHn#2627cd6c-1a73-4b51-9b9b-780789edbadc).
 
+## Screenshots
+
+The request screenshots can be found at `docs/screenshots.pdf`.
+
 ## More info
 
 - [Http requests in Go](https://blog.logrocket.com/making-http-requests-in-go/)

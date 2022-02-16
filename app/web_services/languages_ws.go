@@ -7,15 +7,14 @@ import (
 	"net/http"
 )
 
-func NumberToWords() {
-	url := "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+func LanguagesByName() {
+	url := "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
 
 	body := `<?xml version="1.0" encoding="utf-8"?>
 	<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	  <soap:Body>
-		<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-		  <ubiNum>500</ubiNum>
-		</NumberToWords>
+		<ListOfLanguagesByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+		</ListOfLanguagesByName>
 	  </soap:Body>
 	</soap:Envelope>`
 

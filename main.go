@@ -14,6 +14,6 @@ func main() {
 	log.Println("calling currencies ws...")
 	web_services.ListCurrenciesByName()
 
-	log.Println("calling list numbers ws...")
-	web_services.NumberToWords()
+	log.Println("calling languages ws...")
+	web_services.LanguagesByName()
 }
