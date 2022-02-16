@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: go-ws-consumer
-    command: sh -c "sleep 120 && go run main.go"
+    command: sh -c "sleep 60 && go run main.go"
     depends_on:
       - wireshark
     volumes:

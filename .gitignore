@@ -1,3 +1,4 @@
 .docker/wireshark/.cache
 .docker/wireshark/.dbus
 .docker/wireshark/.local
+.docker/wireshark/*.log
