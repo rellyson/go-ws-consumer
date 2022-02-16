@@ -1,20 +1,28 @@
 version: '3.7'
 
 services:
-  nginx:
-    image: nginx:1.21.6-alpine
-    container_name: nginx
-    ports:
-      - '8888:8888'
-    volumes:
-      - ./.docker/nginx.conf:/etc/nginx/nginx.conf:ro
-    links:
-      - "consumer:cs"
-  
   consumer:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: go-ws-consumer
+    command: sh -c "sleep 120 && go run main.go"
+    depends_on:
+      - wireshark
     volumes:
       - .:/opt/app
+
+  wireshark:
+    image: lscr.io/linuxserver/wireshark
+    container_name: wireshark
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    ports:
+      - 3000:3000
+    volumes:
+      - ./.docker/wireshark:/config
