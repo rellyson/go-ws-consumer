@@ -18,7 +18,3 @@ services:
     container_name: go-ws-consumer
     volumes:
       - .:/opt/app
-    ports:
-      - '3000:3000'
-    environment:
-      - APP_ENV=develop
